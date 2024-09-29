@@ -1,0 +1,133 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+main {
+    cursor: pointer;
+}
+
+.list {
+    background-color: white;
+    list-style: none;
+    width: 400px;
+    height: 30px;
+    margin: 20% auto;
+    border-radius: 20px;
+    box-shadow: 0 0 25px 10px black;
+}
+
+@keyframes primeiro {
+    0% {
+
+    }
+
+    50% {
+        transform: translateY(110px) rotate(0);
+    }
+    100% {
+        transform: translateY(110px) rotate(45deg)
+    }
+}
+
+@keyframes segundo {
+    to {
+        width: 0;
+    }
+}
+
+@keyframes terceiro {
+    0% {
+
+    }
+
+    50% {
+        transform: translateY(-110px) rotate(0);
+    }
+    100% {
+        transform: translateY(-110px) rotate(135deg)
+    }
+}
+.active:nth-child(1) {
+    animation-name: primeiro;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.active:nth-child(2) {
+    animation: segundo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.active:nth-child(3) {
+    animation-name: terceiro;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes primeiroV {
+    0% {
+        transform: translateY(110px) rotate(45deg)
+    }
+
+    50% {
+        transform: translateY(110px) rotate(0);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes segundoV {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes terceiroV {
+    0% {
+        transform: translateY(-110px) rotate(135deg)
+    }
+
+    50% {
+        transform: translateY(-110px) rotate(0);
+    }
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
+
+.off:nth-child(1) {
+    animation-name: primeiroV;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.off:nth-child(2) {
+    animation: segundoV;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+}
+
+.off:nth-child(3) {
+    animation-name: terceiroV;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
